@@ -4,12 +4,12 @@ import DiplomaPage from './pages/DiplomaPage';
 import ModulePage from './pages/ModulePage';
 import RegistrationPage from './pages/RegistrationPage';
 import ModuleDetail from './components/ModuleDetail';
-import Navbar from './components/Navbar';
+import Navbar from './components/navbar';
 
 function App() {
   return (
     <Router>
-      <Navbar /> {/* Add the Navbar component here */}
+      <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/diplomas" element={<DiplomaPage />} />

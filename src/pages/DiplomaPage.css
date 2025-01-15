@@ -1,0 +1,34 @@
+.diplomas {
+    padding: 20px;
+  }
+  
+  .diploma-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .diploma-item {
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .diploma-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .diploma-item p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  
+  .diploma-image {
+    width: 100%;
+    height: auto;
+    max-width: 300px; /* Optional: You can adjust this depending on your layout */
+    margin-bottom: 15px; /* Adds space between the image and the description */
+    border-radius: 8px; /* Optional: Adds rounded corners to the image */
+  }
+  
