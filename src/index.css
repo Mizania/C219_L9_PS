@@ -1,15 +1,27 @@
-/* index.css */
+
+/* General Body Styling */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
-}
-
-h1, h2, h3 {
   color: #333;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align content to the top of the screen */
+  min-height: 100vh; /* Ensures full viewport height */
+  padding-top: 60px; /* Adds space for the navbar */
 }
 
+/* Global Header Styling */
+h1, h2, h3 {
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+/* Link Styling */
 a {
   color: #007bff;
   text-decoration: none;
@@ -19,26 +31,125 @@ a:hover {
   text-decoration: underline;
 }
 
-div {
+/* Container for Layout (e.g., center content) */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
   padding: 20px;
-  margin: 10px;
+  width: 100%;
+  text-align: center;
 }
 
-form input {
-  padding: 10px;
-  margin: 10px;
+/* Clean Form Styles */
+form {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+form input,
+form select,
+form button {
+  font-size: 1rem;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
   width: 100%;
-  max-width: 300px;
+}
+
+form input,
+form select {
+  box-sizing: border-box;
 }
 
 form button {
-  padding: 10px;
   background-color: #007bff;
   color: white;
-  border: none;
   cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
 }
 
 form button:hover {
   background-color: #0056b3;
+}
+
+/* Input field Focus Styles */
+form input:focus,
+form select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Diploma Item Styling */
+.diploma-item {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.diploma-item h3 {
+  color: #2c3e50;
+}
+
+.diploma-item img {
+  width: 100%;
+  border-radius: 4px;
+  margin: 10px 0;
+}
+
+/* Navbar Styling */
+nav {
+  background-color: #333;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10; /* Ensure the navbar stays on top */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+  color: #f4f4f4;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  form input,
+  form select,
+  form button {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .container {
+    padding: 15px;
+  }
 }
